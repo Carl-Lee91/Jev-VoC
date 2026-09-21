@@ -1,4 +1,5 @@
 export { FAQ_TEMPLATES, getFaqReply } from "./faq";
+export { INQUIRY_VALIDATION_MESSAGES } from "./messages";
 export {
   CONFIDENCE_THRESHOLD,
   FRUSTRATION_ESCALATE_LEVEL,
