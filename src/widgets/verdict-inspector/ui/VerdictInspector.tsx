@@ -47,7 +47,10 @@ export function VerdictInspector({ state, verdict, reason }: VerdictInspectorPro
         판정 인스펙터
       </h2>
 
-      <div className={`px-4 pb-4 ${isOpen ? "block" : "hidden lg:block"}`}>
+      <div
+        data-testid="inspector-content"
+        className={`px-4 pb-4 ${isOpen ? "block" : "hidden lg:block"}`}
+      >
         <InspectorContent state={state} verdict={verdict} reason={reason} />
       </div>
     </aside>
