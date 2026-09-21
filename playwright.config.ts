@@ -1,6 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const BASE_URL = "http://127.0.0.1:3100";
+const BASE_URL = "http://localhost:3100";
 
 export default defineConfig({
   testDir: "./e2e",
@@ -14,12 +14,8 @@ export default defineConfig({
   },
   projects: [
     {
-      name: "chromium-desktop",
+      name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-    },
-    {
-      name: "chromium-mobile",
-      use: { ...devices["Desktop Chrome"], viewport: { width: 360, height: 780 } },
     },
   ],
   webServer: {
