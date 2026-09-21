@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/**
+ * 의미 단위 색상 토큰 (docs/02-화면명세서.md 3)
+ * 컴포넌트에서 하드코딩된 hex 나 원시 팔레트를 직접 쓰지 않는다.
+ * 다크모드는 Phase 1 범위 밖이지만, 나중에 붙일 수 있도록 토큰으로 빼 둔다.
+ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* 중립 — 표면과 텍스트 */
+  --color-surface: var(--color-white);
+  --color-surface-muted: var(--color-slate-50);
+  --color-surface-sunken: var(--color-slate-100);
+  --color-line: var(--color-slate-200);
+  --color-line-strong: var(--color-slate-300);
+  --color-content: var(--color-slate-900);
+  --color-content-muted: var(--color-slate-500);
+  --color-content-inverse: var(--color-white);
+
+  /* 자동응답 / 정상 */
+  --color-auto-reply: var(--color-emerald-600);
+  --color-auto-reply-strong: var(--color-emerald-700);
+  --color-auto-reply-soft: var(--color-emerald-50);
+  --color-auto-reply-line: var(--color-emerald-200);
+
+  /* 되묻기 / 주의 */
+  --color-clarify: var(--color-amber-600);
+  --color-clarify-strong: var(--color-amber-700);
+  --color-clarify-soft: var(--color-amber-50);
+  --color-clarify-line: var(--color-amber-200);
+
+  /* 이관 / 위험 */
+  --color-escalate: var(--color-rose-600);
+  --color-escalate-strong: var(--color-rose-700);
+  --color-escalate-soft: var(--color-rose-50);
+  --color-escalate-line: var(--color-rose-200);
+
+  /* 의도별 배지 */
+  --color-intent-billing: var(--color-violet-700);
+  --color-intent-billing-soft: var(--color-violet-50);
+  --color-intent-technical: var(--color-sky-700);
+  --color-intent-technical-soft: var(--color-sky-50);
+  --color-intent-account: var(--color-teal-700);
+  --color-intent-account-soft: var(--color-teal-50);
+  --color-intent-shipping: var(--color-indigo-700);
+  --color-intent-shipping-soft: var(--color-indigo-50);
+  --color-intent-etc: var(--color-slate-600);
+  --color-intent-etc-soft: var(--color-slate-100);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface-muted);
+  color: var(--color-content);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
