@@ -1,7 +1,6 @@
 import type { VocAnswers } from "@/shared/api";
 import { NOUL_TRUE_THRESHOLD } from "@/shared/config";
-
-import type { JevVerdict } from "../model/types";
+import type { JevVerdict } from "@/shared/model";
 
 /** noul 은 yes 확률(0~1)로 오므로 임계값으로 boolean 해석한다. */
 export function isNoulTrue(noulProbability: number): boolean {

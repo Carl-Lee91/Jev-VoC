@@ -1,9 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import { CONFIDENCE_THRESHOLD } from "@/shared/config";
-import type { Intent } from "@/shared/model";
+import type { Intent, JevVerdict } from "@/shared/model";
 
-import type { JevVerdict } from "../model/types";
 import { resolveAction } from "./route-policy";
 
 interface VerdictOverrides {

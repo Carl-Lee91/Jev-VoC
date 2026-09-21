@@ -1,3 +1,8 @@
+export type {
+  FrustrationVerdict,
+  IntentVerdict,
+  JevVerdict,
+} from "./verdict";
 export {
   INTENTS,
   isIntent,

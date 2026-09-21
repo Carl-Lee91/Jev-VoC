@@ -1,7 +1,12 @@
 import { CONFIDENCE_THRESHOLD, FRUSTRATION_ESCALATE_LEVEL } from "@/shared/config";
-import { isIntent, type Priority } from "@/shared/model";
+import {
+  isIntent,
+  type IntentVerdict,
+  type JevVerdict,
+  type Priority,
+} from "@/shared/model";
 
-import type { IntentVerdict, JevVerdict, RouteDecision } from "../model/types";
+import type { RouteDecision } from "../model/types";
 
 /**
  * 라우팅 정책 (docs/01-기획명세서.md 5.4)
